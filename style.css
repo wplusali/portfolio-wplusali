@@ -150,13 +150,15 @@ body, html {
 
     #contact {
         background-color: #f3f3f3;
-        padding: 40px;
+        padding: 30px;
         text-align: center;
     }
     
     #contact h2 {
         color: #333;
-        margin-bottom: 20px;
+        margin-top: 0;
+        margin-bottom: 30px;
+        font-weight: 100;
     }
     
     .form-group {
@@ -175,29 +177,40 @@ body, html {
     .form-group input[type="email"],
     .form-group textarea {
         width: 100%;
-        padding: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         border: 1px solid #ddd;
         border-radius: 5px;
+        margin-bottom: 10px;
     }
     
     .form-group textarea {
         height: 100px;
         resize: vertical;
+        margin-bottom: 10px;
     }
     
     .submit-button {
-        background-color: black;
-        color: white;
         padding: 10px 20px;
+        margin-right: 10px;
         border: none;
         border-radius: 5px;
+        font-size: 16px;
         cursor: pointer;
-        transition: background-color 0.3s;
+        transition: background-color 0.3s, color 0.3s;
+        text-decoration: none;
+    }
+
+    .submit-button {
+        background-color: black; /* LinkedIn color */
+        color: #f3f3f3;
+        border: 2px solid black;
     }
     
     .submit-button:hover {
-        background-color: #555;
-    }    
+        background-color: black;
+        color: white; /* Darker shade for hover */
+    }
     
 }
 
@@ -244,7 +257,7 @@ body, html {
     .close-menu {
         display: block;
         position: absolute;
-        top: 10px;
+        top: 5px;
         right: 0px;
         background: none;
         padding-right: 25px;
@@ -371,16 +384,20 @@ body, html {
 
     #contact {
         background-color: #f3f3f3;
-        padding: 40px;
+        padding: 30px;
         text-align: center;
     }
     
     #contact h2 {
         color: #333;
-        margin-bottom: 20px;
+        margin-top: 0;
+        margin-bottom: 30px;
+        font-weight: 100;
     }
     
     .form-group {
+        max-width: 800px;
+        margin: auto;
         margin-bottom: 15px;
         text-align: left;
     }
@@ -394,27 +411,38 @@ body, html {
     .form-group input[type="email"],
     .form-group textarea {
         width: 100%;
-        padding: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         border: 1px solid #ddd;
         border-radius: 5px;
+        margin-bottom: 10px;
     }
     
     .form-group textarea {
         height: 100px;
         resize: vertical;
+        margin-bottom: 10px;
     }
     
     .submit-button {
-        background-color: black;
-        color: white;
         padding: 10px 20px;
+        margin-right: 10px;
         border: none;
         border-radius: 5px;
+        font-size: 16px;
         cursor: pointer;
-        transition: background-color 0.3s;
+        transition: background-color 0.3s, color 0.3s;
+        text-decoration: none;
+    }
+
+    .submit-button {
+        background-color: black; /* LinkedIn color */
+        color: #f3f3f3;
+        border: 2px solid black;
     }
     
     .submit-button:hover {
-        background-color: #555;
-    }    
+        background-color: black;
+        color: white; /* Darker shade for hover */
+    }
 }

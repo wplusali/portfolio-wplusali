@@ -8,35 +8,59 @@
 </head>
 <body>
     <header>
-        <div class="logo">wplusali</div>
-        <nav>
-            <button class="burger-menu" aria-label="Open Menu">&#9776;</button>
-            <div class="menu">
-                <button class="close-menu" aria-label="Close Menu">&times;</button>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#work">Work</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <div class="profile">
-        <div class="profile-picture">
-            <!-- Profile image goes here -->
-            <img src="profile_pic.png" alt="Profile Picture">
+        <div class="header-container">
+            <div class="logo">wplusali</div>
+            <nav>
+                <button class="burger-menu" aria-label="Open Menu">&#9776;</button>
+                <div class="menu">
+                    <button class="close-menu" aria-label="Close Menu">&times;</button>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#work">Work</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
         </div>
-        <div class="profile-content">
-            <!-- Bio content goes here -->
-            <h1>Wajid Ali</h1>
-            <h2>Technical Product Manager</h2>
-            <p >Passionate Product Manager melding frontend development skills with design thinking. 
-                Dedicated to crafting user-centric products that balance innovative technology with intuitive design. Driven by data, creativity, and a collaborative approach.</p>
-            <!-- Add more bio content as needed -->
-            <a href="https://www.linkedin.com/in/wplusali" target="_blank" rel="noopener noreferrer" class="profile-button linkedin">LinkedIn</a>
-            <a href="https://github.com/wplusali" target="_blank" rel="noopener noreferrer" class="profile-button github">GitHub</a>
+    </header>
+
+    <div class="profile">
+        <div class="profile-container">
+            <div class="profile-picture">
+                <!-- Profile image goes here -->
+                <img src="profile_pic.png" alt="Profile Picture">
+            </div>
+            <div class="profile-content">
+                <!-- Bio content goes here -->
+                <h1>Wajid Ali</h1>
+                <h2>Technical Product Manager</h2>
+                <p >Passionate Product Manager melding frontend development skills with design thinking. 
+                    Dedicated to crafting user-centric products that balance innovative technology with intuitive design. Driven by data, creativity, and a collaborative approach.</p>
+                <!-- Add more bio content as needed -->
+                <a href="https://www.linkedin.com/in/wplusali" target="_blank" rel="noopener noreferrer" class="profile-button linkedin">LinkedIn</a>
+                <a href="https://github.com/wplusali" target="_blank" rel="noopener noreferrer" class="profile-button github">GitHub</a>
+            </div>
         </div>
     </div>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="wplusali@gmail.com" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Send Message</button>
+        </form>
+    </section>
+    
     
     <!-- Your content here -->
 <script src="script.js"></script>

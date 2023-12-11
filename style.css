@@ -328,7 +328,7 @@ body, html {
         overflow: hidden;
         border-radius: 50%; /* Circular shape */
         margin: auto;
-        margin-bottom: 25px;
+        margin-bottom: 15px;
     }
     
     .profile-picture img {

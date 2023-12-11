@@ -179,9 +179,18 @@ body, html {
         width: 100%;
         padding-top: 10px;
         padding-bottom: 10px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
+        border: none;
+        border-bottom: 2px solid #ddd;
+        background-color: transparent;
+        box-sizing: border-box;
         margin-bottom: 10px;
+    }
+
+    .form-group input[type="text"]:focus,
+    .form-group input[type="email"]:focus,
+    .form-group textarea:focus {
+        outline: none;
+        border-bottom: 2px solid #333; /* Darker border on focus */
     }
     
     .form-group textarea {
@@ -413,9 +422,18 @@ body, html {
         width: 100%;
         padding-top: 10px;
         padding-bottom: 10px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
+        border: none;
+        border-bottom: 2px solid #ddd;
+        background-color: transparent;
+        box-sizing: border-box;
         margin-bottom: 10px;
+    }
+
+    .form-group input[type="text"]:focus,
+    .form-group input[type="email"]:focus,
+    .form-group textarea:focus {
+        outline: none;
+        border-bottom: 2px solid #333; /* Darker border on focus */
     }
     
     .form-group textarea {

@@ -1,0 +1,291 @@
+/* style.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+@media (min-width: 768px) {
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        max-width: 800px;
+        align-items: center;
+        height: 75px;
+        padding-bottom: 50px;
+        margin: auto;
+        background: #ffffff;
+        color: rgb(0, 0, 0);
+    }
+    
+    .logo {
+        font-size: 24px;
+    }
+
+    .menu {
+        display: flex; /* Display flex to align items horizontally */
+        position: relative; /* Adjust position if needed */
+        top: auto; /* Reset top value */
+        right: auto; /* Reset right value */
+        width: auto; /* Adjust width to fit content */
+        height: auto; /* Adjust height to fit content */
+        background: transparent; /* Adjust background if needed */
+    }
+
+    .menu ul {
+        padding: 0; /* Reset or adjust padding */
+        margin: 0; /* Reset or adjust margin */
+        display: flex; /* Use flex for horizontal layout */
+    }
+
+    .menu ul li {
+        display: inline-block; /* Display list items inline */
+        padding-left: 10px; /* Adjust padding as needed */
+    }
+
+    .menu ul li a {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+    }
+
+    .burger-menu, .close-menu {
+        display: none; /* Hide close menu button on larger screens */
+    }
+
+    .profile {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-gap: 20px;
+        align-items:flex-start;
+        padding: 40px;
+        background-color: #f3f3f3; /* Light background color */
+        border-radius: 10px; /* Optional: rounded corners */
+        max-width: 800px; /* Adjust based on preference */
+        margin: auto; /* Center the profile on the page */
+    }
+    
+    .profile-picture {
+        width: 150px; /* Adjust size as needed */
+        height: 150px;
+        overflow: hidden;
+        border-radius: 50%; /* Circular shape */
+    }
+    
+    .profile-picture img {
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* Ensures image covers the area */
+    }
+    
+    
+    .profile-content h1 {
+        margin: 0;
+        color: #333; /* Dark text color */
+        font-size: 24px; /* Adjust font size as needed */
+        font-weight:100;
+    }
+    
+    .profile-content h2 {
+        margin: 0;
+        color: #555; /* Slightly lighter text color */
+        font-size: 18px;
+        font-weight: 100;
+    }
+    
+    .profile-content p {
+        color: #666;
+        font-size: 16px;
+        line-height: 1.6; /* Adjust line height for readability */
+        margin-bottom: 35px;
+    }
+
+    .profile-button {
+        padding: 10px 20px;
+        margin-right: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+        text-decoration: none;
+    }
+    
+    .linkedin {
+        background-color: black; /* LinkedIn color */
+        color: #f3f3f3;
+        border: 2px solid black;
+    }
+    
+    .linkedin:hover {
+        background-color: black;
+        color: white; /* Darker shade for hover */
+    }
+    
+    .github {
+        background-color: #f3f3f3;
+        color: black;
+        border: 2px solid black;
+    }
+    
+    .github:hover {
+        background-color: black; /* Light grey for hover */
+        color: white;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        height: 75px;
+        padding: 0px;
+        background: #333;
+        color: white;
+    }
+    
+    .logo {
+        font-size: 24px;
+        padding-left: 25px;
+    }
+
+    .burger-menu {
+        display: block;
+        background: none;
+        padding-right: 25px;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .burger-menu:focus + .menu, .menu:target {
+        display: flex;
+    }
+
+    .close-menu {
+        display: block;
+        position: absolute;
+        top: 27px;
+        right: 10px;
+        background: none;
+        padding-right: 18px;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        padding-top: 60px;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        color: white;
+        align-items:flex-start;
+        justify-content:flex-start;
+    }
+
+    .menu ul {
+        list-style: none;
+        padding-left: 15px;
+        font-size: 24px;
+    }
+    
+    .menu ul li a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+    }
+
+    .profile {
+        grid-template-columns: 1fr; /* Stack the picture and content vertically */
+        text-align: center; /* Center-align the text */
+        padding: 20px; /* Adjust padding as needed */
+        align-items: center;
+        padding: 40px;
+        background-color: #f3f3f3; /* Light background color */
+        border-radius: 10px; /* Optional: rounded corners */
+        max-width: 768px; /* Adjust based on preference */
+        margin: auto; /* Center the profile on the page */
+    }
+
+    .profile-picture {
+        width: 150px; /* Adjust size as needed */
+        height: 150px;
+        overflow: hidden;
+        border-radius: 50%; /* Circular shape */
+        margin: auto;
+        margin-bottom: 25px;
+    }
+    
+    .profile-picture img {
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* Ensures image covers the area */
+    }
+    
+    
+    .profile-content h1 {
+        margin: 0;
+        color: #333; /* Dark text color */
+        font-size: 24px; /* Adjust font size as needed */
+        font-weight:100;
+    }
+    
+    .profile-content h2 {
+        margin: 0;
+        color: #555; /* Slightly lighter text color */
+        font-size: 18px;
+        font-weight: 100;
+    }
+    
+    .profile-content p {
+        color: #666;
+        font-size: 16px;
+        line-height: 1.6; /* Adjust line height for readability */
+        margin-bottom: 30px;
+    }
+
+    .profile-button {
+        padding: 10px 20px;
+        margin-right: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+        text-decoration: none;
+    }
+    
+    .linkedin {
+        background-color: black; /* LinkedIn color */
+        color: #f3f3f3;
+        border: 2px solid black;
+    }
+    
+    .linkedin:hover {
+        background-color: black;
+        color: white; /* Darker shade for hover */
+    }
+    
+    .github {
+        background-color: #f3f3f3;
+        color: black;
+        border: 2px solid black;
+    }
+    
+    .github:hover {
+        background-color: black; /* Light grey for hover */
+        color: white;
+    }
+}

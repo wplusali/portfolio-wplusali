@@ -180,6 +180,7 @@ body, html {
         padding-top: 10px;
         padding-bottom: 10px;
         border: none;
+        font-size: 16px;
         border-bottom: 2px solid #ddd;
         background-color: transparent;
         box-sizing: border-box;
@@ -194,14 +195,14 @@ body, html {
     }
     
     .form-group textarea {
-        height: 100px;
+        height: 45px;
         resize: vertical;
         margin-bottom: 10px;
     }
     
     .submit-button {
         padding: 10px 20px;
-        margin-right: 10px;
+        margin-right: 0px;
         border: none;
         border-radius: 5px;
         font-size: 16px;
@@ -423,6 +424,7 @@ body, html {
         padding-top: 10px;
         padding-bottom: 10px;
         border: none;
+        font-size: 16px;
         border-bottom: 2px solid #ddd;
         background-color: transparent;
         box-sizing: border-box;
@@ -437,7 +439,7 @@ body, html {
     }
     
     .form-group textarea {
-        height: 40px;
+        height: 45px;
         resize: vertical;
         margin-bottom: 10px;
     }

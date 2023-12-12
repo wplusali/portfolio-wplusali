@@ -61,8 +61,7 @@ p  {
     color: white; /* Darker shade for hover */
     border: 2px solid rgb(121, 121, 121);
 }
-
-/* header */
+/* ----------------------------------- Header ---------------------------------- */
 header {
     background: #333; /* Example background color */
     color: white; /* Example text color */
@@ -76,20 +75,20 @@ header {
     margin: auto;
     align-items: center;
 }
-
-/* logo */
+/* ------------------------------------ Logo ----------------------------------- */
 .logo {
     font-size: 24px;
 }
-
 /* ------------------------------- About Section ------------------------------- */
 #about {
     background-color: #f3f3f3;
     padding: 20px 30px 20px 30px;
     margin: 0 0 10px 0;
+    text-align: center;
 }
 .about-grid {
     display: grid;
+    grid-template-rows: repeat(1, 150px 1fr);
     grid-gap: 15px;
     max-width: 800px;
     margin: auto;
@@ -114,8 +113,6 @@ header {
 .about-info p.bio {
     text-align: center;
 }
-/* ------------------------------- About Section ------------------------------- */
-
 /* ------------------------------ Contact Section ------------------------------ */
 #contact {
     background-color: #f3f3f3;
@@ -167,16 +164,13 @@ header {
     height: 45px;
     resize: vertical;
 }
-/* ------------------------------ Contact Section ------------------------------ */
-
-/* >768px screens */
+/* ------------------------------- >768px Screen ------------------------------- */
 @media (min-width: 768px) {
-    /* logo */
+/* ------------------------------------ Logo ----------------------------------- */
     .logo {
         padding: 0 0 0 0px;
     }
-    
-    /* navigation */
+/* --------------------------------- Navigation -------------------------------- */
     .nav-menu {
         display: flex;
         position: relative;
@@ -205,30 +199,18 @@ header {
         padding: 10px;
     }
 
-    /* navigation - nav-burger menu button - hide on >768px */
+/* --------------------------------- Nav Burger -------------------------------- */
     .nav-burger, .nav-close {
         display: none;
     }
-  
-    /* ------------------------------- About Section ------------------------------- */
-    #about,
-    .about-info p.bio {
-        text-align: center;
-    }
-
-    .about-grid {
-        grid-template-rows: repeat(1, 150px 1fr);
-    }
-    /* ------------------------------- About Section ------------------------------- */
 }
-
+/* ------------------------------- <768px Screen ------------------------------- */
 @media (max-width: 768px) {
-    /* logo */
+/* ------------------------------------ Logo ----------------------------------- */
     .logo {
         padding: 0 0 0 25px;
     }
-    
-    /* navigation */
+/* --------------------------------- Navigation -------------------------------- */
     .nav-menu {
         display: none;
         position: fixed;
@@ -256,7 +238,7 @@ header {
         padding: 10px;
     }
 
-    /* navigation - nav-burger menu button */
+/* --------------------------------- Nav Burger -------------------------------- */
     .nav-burger, .nav-close {
         display: block;
         background: none;
@@ -277,15 +259,4 @@ header {
     .nav-burger:focus + .nav-menu, .nav-menu:target {
         display: flex;
     }
-    
-    /* ------------------------------- About Section ------------------------------- */
-    #about,
-    .about-info p.bio {
-        text-align: center;
-    }
-
-    .about-grid {
-        grid-template-rows: repeat(1, 150px 1fr);
-    }
-    /* ------------------------------- About Section ------------------------------- */
 }

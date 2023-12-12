@@ -1,7 +1,7 @@
 // This function will handle both click and touchstart events
 function toggleMenu(event) {
     event.preventDefault(); // Prevents the default action of the event
-    const menu = document.querySelector('.menu');
+    const menu = document.querySelector('nav-menu');
     if (menu.style.display === 'flex') {
         menu.style.display = 'none';
     } else {

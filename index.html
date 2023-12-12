@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- header and navigation -->
     <header>
         <div class="header-container">
             <div class="logo">wplusali</div>
             <nav>
-                <button class="burger-menu" aria-label="Open Menu">&#9776;</button>
-                <div class="menu">
-                    <button class="close-menu" aria-label="Close Menu">&times;</button>
+                <button class="nav-burger" aria-label="Open Navigation">&#9776;</button>
+                <div class="nav-menu">
+                <button class="nav-close" aria-label="Close Navigation">&times;</button>
                     <ul>
                         <li><a href="#about">About</a></li>
                         <li><a href="#work">Work</a></li>
@@ -24,40 +25,47 @@
         </div>
     </header>
 
-    <div class="profile">
-        <div class="profile-container">
+    <!-- about section -->
+    <section id="about">
+        <!-- profile subsection-->
+        <div class="profile">
+            <!-- profile picture -->
             <div class="profile-picture">
-                <!-- Profile image goes here -->
                 <img src="profile-pic.jpg" alt="Profile Picture">
             </div>
+            <!-- profile content -->
             <div class="profile-content">
-                <!-- Bio content goes here -->
+                <!-- profile name -->
                 <h1>Wajid Ali</h1>
+                <!-- profile role -->
                 <h2>Technical Product Manager</h2>
-                <p >Passionate Product Manager melding frontend development skills with design thinking. 
-                    Dedicated to crafting user-centric products that balance innovative technology with intuitive design. Driven by data, creativity, and a collaborative approach.</p>
-                <!-- Add more bio content as needed -->
-                <a href="https://www.linkedin.com/in/wplusali" target="_blank" rel="noopener noreferrer" class="profile-button linkedin">LinkedIn</a>
-                <a href="https://github.com/wplusali" target="_blank" rel="noopener noreferrer" class="profile-button github">GitHub</a>
+                <!-- location -->
+                <h3>Manchester, UK</h3>
+                <!-- profile bio -->
+                <h4>Passionate Product Manager melding frontend development skills with design thinking. 
+                    Dedicated to crafting user-centric products that balance innovative technology with intuitive design. Driven by data, creativity, and a collaborative approach.
+                </h4>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- contact section -->
     <section id="contact">
-        <h2>Contact Me</h2>
+        <h1>Contact Me</h1>
         <form action="mailto:wplusali@gmail.com" method="POST" enctype="text/plain">
             <div class="form-group">
-                <label for="name">Name</label>
+                <label for="name"><h3>Name</h3></label>
                 <input type="text" id="name" name="name" required>
             </div>
             <div class="form-group">
-                <label for="email">Email</label>
+                <label for="email"><h3>Email</h3></label>
                 <input type="email" id="email" name="email" required>
             </div>
             <div class="form-group">
-                <label for="message">Message</label>
+                <label for="message"><h3>Message</h3></label>
                 <textarea id="message" name="message" required></textarea>
             </div>
-            <button type="submit" class="submit-button">Send Message</button>
+            <button type="submit" class="button">Send Message</button>
         </form>
     </section>
     

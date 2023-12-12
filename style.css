@@ -9,29 +9,29 @@ body, html {
 h1 {
     margin: 0 0 9px 0;
     color: #333; /* Dark text color */
-    font-size: 24px; /* Adjust font size as needed */
-    font-weight: 400;
+    font-size: 26px; /* Adjust font size as needed */
+    font-weight: 500;
 }
 
 h2 {
     margin: 0 0 7px 0;
     color: #555; /* Slightly lighter text color */
-    font-size: 20px;
-    font-weight: 300;
+    font-size: 24px;
+    font-weight: 500;
 }
 
 h3 {
     margin: 0 0 5px 0;
     color: #555; /* Slightly lighter text color */
     font-size: 18px;
-    font-weight: 200;
+    font-weight: 400;
 }
 
 h4 {
     margin: 0 0 3px 0;
     color: #555; /* Slightly lighter text color */
     font-size: 16px;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 p  {
@@ -88,80 +88,57 @@ header {
     font-size: 24px;
 }
 
-/* about section - profile picture, profile content */
-#about {
-    background-color: #f3f3f3; /* Light background color */
-    padding: 40px 0; /* Top and bottom padding */
-    width: 100%; /* Full width */
-    margin-bottom: 10px;
-}
-
-.profile {
-    display: grid;
-    grid-gap: 20px;
-    max-width: 800px; /* Maximum width of content */
-    margin: 0 auto; /* Centers the content horizontally */
-    align-items: flex-start;
-}
-
-.profile-picture {
-    width: 150px; /* Adjust size as needed */
-    height: 150px;
-    overflow: hidden;
-    border-radius: 50%; /* Circular shape */
-}
-
-.profile-picture img {
-    width: 100%;
-    height: auto;
-    object-fit: cover; /* Ensures image covers the area */
-}
-
 /* contact section */
 #contact {
     background-color: #f3f3f3;
-    padding: 30px;
+    padding: 20px 30px 20px 30px;
     text-align: center;
+/*  margin: 0 0 10px 0;  */ /* To add a space between the next section */
 }
-    
-    
-    .form-group {
-        max-width: 800px;
-        margin: auto;
-        margin-bottom: 15px;
-        text-align: left;
-    }
-    
-    .form-group label {
-        display: block;
-        margin-bottom: 5px;
-    }
-    
-    .form-group input[type="text"],
-    .form-group input[type="email"],
-    .form-group textarea {
-        width: 100%;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        border: none;
-        font-size: 16px;
-        border-bottom: 2px solid #ddd;
-        background-color: transparent;
-        box-sizing: border-box;
-        margin-bottom: 10px;
-    }
 
-    .form-group input[type="text"]:focus,
-    .form-group input[type="email"]:focus,
-    .form-group textarea:focus {
-        outline: none;
-        border-bottom: 2px solid #333; /* Darker border on focus */
-    }
-    
-    .form-group textarea {
-        height: 45px;
-        resize: vertical;
-    }
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 15px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.contact-form {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    font-size: 16px;
+    border-bottom: 2px solid #ddd;
+    background-color: transparent;
+    box-sizing: border-box;
+    margin: 0 0 0px 0;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-bottom: 2px solid #333;
+}
+
+.contact-form textarea {
+    height: 45px;
+    resize: vertical;
+}
 
 /* >768px screens */
 @media (min-width: 768px) {
@@ -202,12 +179,6 @@ header {
     /* navigation - nav-burger menu button - hide on >768px */
     .nav-burger, .nav-close {
         display: none;
-    }
-    
-    /* about section - profile picture, profile content */
-    .profile {
-        grid-template-columns: auto 1fr;
-        padding: 0 10px; /* Left and right padding */
     }
 }
 
@@ -265,18 +236,5 @@ header {
 
     .nav-burger:focus + .nav-menu, .nav-menu:target {
         display: flex;
-    }
-    
-    /* about section - profile picture, profile content */
-    .profile {
-        grid-template-columns: 1fr;
-        max-width: 800px;
-        margin: 0;
-        padding: 0 25px 0 25px;
-        text-align:center;
-    }
-
-    .profile-picture {
-        margin: auto;
     }
 }

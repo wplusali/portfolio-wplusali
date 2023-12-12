@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <!-- header and navigation -->
     <header>
         <div class="header-container">
@@ -24,50 +25,29 @@
             </nav>
         </div>
     </header>
-
-    <!-- about section -->
-    <section id="about">
-        <!-- profile subsection-->
-        <div class="profile">
-            <!-- profile picture -->
-            <div class="profile-picture">
-                <img src="profile-pic.jpg" alt="Profile Picture">
-            </div>
-            <!-- profile content -->
-            <div class="profile-content">
-                <!-- profile name -->
-                <h1>Wajid Ali</h1>
-                <!-- profile role -->
-                <h2>Technical Product Manager</h2>
-                <!-- location -->
-                <h3>Manchester, UK</h3>
-                <!-- profile bio -->
-                <h4>Passionate Product Manager melding frontend development skills with design thinking. 
-                    Dedicated to crafting user-centric products that balance innovative technology with intuitive design. Driven by data, creativity, and a collaborative approach.
-                </h4>
-            </div>
+    
+    <!-- contact section -->
+    <section id="contact">
+        <div class="contact-container">
+            <h2>Contact Me</h2>
+            <form action="mailto:wplusali@gmail.com" method="POST" enctype="text/plain">
+                <div class="contact-form">
+                    <label for="name"><h3>Name</h3></label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="contact-form">
+                    <label for="email"><h3>Email</h3></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="contact-form">
+                    <label for="message"><h3>Message</h3></label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="button">Send Message</button>
+            </form>
         </div>
     </section>
 
-    <!-- contact section -->
-    <section id="contact">
-        <h1>Contact Me</h1>
-        <form action="mailto:wplusali@gmail.com" method="POST" enctype="text/plain">
-            <div class="form-group">
-                <label for="name"><h3>Name</h3></label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email"><h3>Email</h3></label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="message"><h3>Message</h3></label>
-                <textarea id="message" name="message" required></textarea>
-            </div>
-            <button type="submit" class="button">Send Message</button>
-        </form>
-    </section>
     
     
     <!-- Your content here -->

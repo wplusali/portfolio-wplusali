@@ -1,15 +1,15 @@
 /* style.css */
-
+/* ------------------------------- Reset Defaults ------------------------------ */
 body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
 }
-
+/* ---------------------------------- Headings --------------------------------- */
 h1 {
     margin: 0 0 9px 0;
     color: #333; /* Dark text color */
-    font-size: 28px; /* Adjust font size as needed */
+    font-size: 48px; /* Adjust font size as needed */
     font-weight: 600;
 }
 
@@ -24,7 +24,7 @@ h3 {
     margin: 0 0 5px 0;
     color: #555; /* Slightly lighter text color */
     font-size: 20px;
-    font-weight: 400;
+    font-weight:lighter;
 }
 
 h4 {
@@ -40,8 +40,7 @@ p  {
     font-size: 16px;
     line-height: 1.6; /* Adjust line height for readability */
 }
-
-/* button styling */
+/* ----------------------------------- Button ---------------------------------- */
 .button {
     padding: 10px 20px;
     margin: 10px 5px 10px 5px;
@@ -84,23 +83,23 @@ header {
     background-color: #f3f3f3;
     padding: 20px 30px 20px 30px;
     margin: 0 0 10px 0;
-    text-align: center;
+    text-align: left;
 }
 .about-grid {
     display: grid;
-    grid-template-rows: repeat(1, 150px 1fr);
+    grid-template-rows: repeat(1, 125px 1fr);
     grid-gap: 15px;
     max-width: 800px;
     margin: auto;
+    align-items: center;
 }
 
 .profile-pic {
-    width: 150px;
-    height: 150px;
+    width: 75px;
+    height: 75px;
     border-radius: 50%;
-    border: #fff solid 2px;
     overflow: hidden;
-    margin: auto;
+    margin: left;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -111,7 +110,62 @@ header {
 }
 
 .about-info p.bio {
+    text-align: left;
+}
+/* ------------------------------- Work Section -------------------------------- */
+#work {
+    padding: 20px;
+    background-color: #f3f3f3; /* Adjust background color as needed */
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover img {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+    color: white;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+}
+
+.grid-item:hover .overlay {
+    opacity: 1;
+}
+
+/* Styling for the hero grid item */
+.hero {
+    grid-column: span 2; /* Hero item spans two columns */
 }
 /* ------------------------------ Contact Section ------------------------------ */
 #contact {
@@ -163,6 +217,55 @@ header {
 .contact-form textarea {
     height: 45px;
     resize: vertical;
+}
+/* ----------------------------------- Footer --------------------------------- */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 800px;
+    margin: auto;
+    gap: 20px;
+}
+
+.footer-section {
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    margin: 0 0 1px 0;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.6; /* Adjust line height for readability */
+}
+
+.footer-section a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    line-height: 1.6;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+    text-decoration-color: #fff;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    grid-column: span 3; /* Makes the bottom footer span all columns */
 }
 /* ------------------------------- >768px Screen ------------------------------- */
 @media (min-width: 768px) {
@@ -237,7 +340,6 @@ header {
         display: block;
         padding: 10px;
     }
-
 /* --------------------------------- Nav Burger -------------------------------- */
     .nav-burger, .nav-close {
         display: block;
@@ -258,5 +360,17 @@ header {
 
     .nav-burger:focus + .nav-menu, .nav-menu:target {
         display: flex;
+    }
+/* ------------------------------- Work Section -------------------------------- */
+    .work-grid {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+
+    .hero {
+        grid-column: auto; /* Revert to default on small screens */
+    }
+/* ----------------------------------- Footer --------------------------------- */
+    .footer-grid {
+        grid-template-columns: 1fr;
     }
 }

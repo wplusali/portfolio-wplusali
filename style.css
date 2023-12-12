@@ -6,160 +6,124 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
-@media (min-width: 768px) {
-    header {
-        display: grid;
-        grid-template-columns: 1fr auto; /* Maintain the grid layout */
-        align-items: center;
-        width: 100%; /* Full width */
-        background: #333; /* Example background color */
-        color: white; /* Example text color */
-        padding: 10px 0; /* Top and bottom padding */
-    }
-    
-    .header-container {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        max-width: 800px; /* Maximum width of content */
-        margin: 0 auto; /* Centers the content horizontally */
-        width: 100%; /* Use the full width of the container */
-        align-items: center; /* Vertically center items */
-        padding: 0 10px; /* Left and right padding */
-    }
-    
-    .logo {
-        font-size: 24px;
-    }
+h1 {
+    margin: 0 0 9px 0;
+    color: #333; /* Dark text color */
+    font-size: 24px; /* Adjust font size as needed */
+    font-weight: 400;
+}
 
-    .menu {
-        display: flex; /* Display flex to align items horizontally */
-        position: relative; /* Adjust position if needed */
-        top: auto; /* Reset top value */
-        right: auto; /* Reset right value */
-        width: auto; /* Adjust width to fit content */
-        height: auto; /* Adjust height to fit content */
-        background: transparent; /* Adjust background if needed */
-    }
+h2 {
+    margin: 0 0 7px 0;
+    color: #555; /* Slightly lighter text color */
+    font-size: 20px;
+    font-weight: 300;
+}
 
-    .menu ul {
-        padding: 0; /* Reset or adjust padding */
-        margin: 0; /* Reset or adjust margin */
-        display: flex; /* Use flex for horizontal layout */
-    }
+h3 {
+    margin: 0 0 5px 0;
+    color: #555; /* Slightly lighter text color */
+    font-size: 18px;
+    font-weight: 200;
+}
 
-    .menu ul li {
-        display: inline-block; /* Display list items inline */
-        padding-left: 10px; /* Adjust padding as needed */
-    }
+h4 {
+    margin: 0 0 3px 0;
+    color: #555; /* Slightly lighter text color */
+    font-size: 16px;
+    font-weight: 200;
+}
 
-    .menu ul li a {
-        color: white;
-        text-decoration: none;
-        display: block;
-        padding: 10px;
-    }
+p  {
+    margin: 0 0 1px 0;
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6; /* Adjust line height for readability */
+}
 
-    .burger-menu, .close-menu {
-        display: none; /* Hide close menu button on larger screens */
-    }
+/* button styling */
+.button {
+    padding: 10px 20px;
+    margin: 10px 5px 10px 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+}
 
-    .profile {
-        background-color: #f3f3f3; /* Light background color */
-        padding: 40px 0; /* Top and bottom padding */
-        width: 100%; /* Full width */
-        margin-bottom: 10px;
-    }
-    
-    .profile-container {
-        display: grid;
-        grid-template-columns: auto 1fr;
-        grid-gap: 20px;
-        max-width: 800px; /* Maximum width of content */
-        margin: 0 auto; /* Centers the content horizontally */
-        padding: 0 10px; /* Left and right padding */
-        align-items: flex-start;
-    }
-    
-    .profile-picture {
-        width: 150px; /* Adjust size as needed */
-        height: 150px;
-        overflow: hidden;
-        border-radius: 50%; /* Circular shape */
-    }
-    
-    .profile-picture img {
-        width: 100%;
-        height: auto;
-        object-fit: cover; /* Ensures image covers the area */
-    }
-    
-    
-    .profile-content h1 {
-        margin: 0;
-        color: #333; /* Dark text color */
-        font-size: 24px; /* Adjust font size as needed */
-        font-weight:100;
-    }
-    
-    .profile-content h2 {
-        margin: 0;
-        color: #555; /* Slightly lighter text color */
-        font-size: 18px;
-        font-weight: 100;
-    }
-    
-    .profile-content p {
-        color: #666;
-        font-size: 16px;
-        line-height: 1.6; /* Adjust line height for readability */
-        margin-bottom: 35px;
-    }
+.button:hover {
+    background-color: rgb(121, 121, 121);
+    color: white; /* Darker shade for hover */
+    border: 2px solid rgb(121, 121, 121);
+}
 
-    .profile-button {
-        padding: 10px 20px;
-        margin-right: 10px;
-        border: none;
-        border-radius: 5px;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s, color 0.3s;
-        text-decoration: none;
-    }
-    
-    .linkedin {
-        background-color: black; /* LinkedIn color */
-        color: #f3f3f3;
-        border: 2px solid black;
-    }
-    
-    .linkedin:hover {
-        background-color: black;
-        color: white; /* Darker shade for hover */
-    }
-    
-    .github {
-        background-color: #f3f3f3;
-        color: black;
-        border: 2px solid black;
-    }
-    
-    .github:hover {
-        background-color: black; /* Light grey for hover */
-        color: white;
-    }
+/* header */
+header {
+    display: grid;
+    grid-template-columns: 1fr auto; /* Maintain the grid layout */
+    align-items: center;
+    width: 100%; /* Full width */
+    background: #333; /* Example background color */
+    color: white; /* Example text color */
+    padding: 10px 0; /* Top and bottom padding */
+}
 
-    #contact {
-        background-color: #f3f3f3;
-        padding: 30px;
-        text-align: center;
-    }
+.header-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    max-width: 800px; /* Maximum width of content */
+    margin: 0 auto; /* Centers the content horizontally */
+    width: 100%; /* Use the full width of the container */
+    align-items: center; /* Vertically center items */
+    padding: 0; /* Left and right padding */
+}
+
+/* logo */
+.logo {
+    font-size: 24px;
+}
+
+/* about section - profile picture, profile content */
+#about {
+    background-color: #f3f3f3; /* Light background color */
+    padding: 40px 0; /* Top and bottom padding */
+    width: 100%; /* Full width */
+    margin-bottom: 10px;
+}
+
+.profile {
+    display: grid;
+    grid-gap: 20px;
+    max-width: 800px; /* Maximum width of content */
+    margin: 0 auto; /* Centers the content horizontally */
+    align-items: flex-start;
+}
+
+.profile-picture {
+    width: 150px; /* Adjust size as needed */
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%; /* Circular shape */
+}
+
+.profile-picture img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures image covers the area */
+}
+
+/* contact section */
+#contact {
+    background-color: #f3f3f3;
+    padding: 30px;
+    text-align: center;
+}
     
-    #contact h2 {
-        color: #333;
-        margin-top: 0;
-        margin-bottom: 30px;
-        font-weight: 100;
-    }
     
     .form-group {
         max-width: 800px;
@@ -197,272 +161,122 @@ body, html {
     .form-group textarea {
         height: 45px;
         resize: vertical;
-        margin-bottom: 10px;
-    }
-    
-    .submit-button {
-        padding: 10px 20px;
-        margin-right: 0px;
-        border: none;
-        border-radius: 5px;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s, color 0.3s;
-        text-decoration: none;
     }
 
-    .submit-button {
-        background-color: black; /* LinkedIn color */
-        color: #f3f3f3;
-        border: 2px solid black;
-    }
-    
-    .submit-button:hover {
-        background-color: black;
-        color: white; /* Darker shade for hover */
-    }
-    
-}
-
-@media (max-width: 768px) {
-    header {
-        display: grid;
-        grid-template-columns: 1fr auto; /* Maintain the grid layout */
-        align-items: center;
-        width: 100%; /* Full width */
-        background: #333; /* Example background color */
-        color: white; /* Example text color */
-        padding: 10px 0; /* Top and bottom padding */
-    }
-    
-    .header-container {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        max-width: 800px; /* Maximum width of content */
-        margin: 0 auto; /* Centers the content horizontally */
-        width: 100%; /* Use the full width of the container */
-        align-items: center; /* Vertically center items */
-        padding: 0; /* Left and right padding */
-    }
-    
+/* >768px screens */
+@media (min-width: 768px) {
+    /* logo */
     .logo {
-        font-size: 24px;
-        padding-left: 25px;
+        padding: 0 0 0 0px;
+    }
+    
+    /* navigation */
+    .nav-menu {
+        display: flex;
+        position: relative;
+        top: auto;
+        right: auto;
+        width: auto;
+        height: auto;
+        background: transparent;
     }
 
-    .burger-menu {
-        display: block;
-        background: none;
-        padding-right: 25px;
-        border: none;
-        color: white;
-        font-size: 24px;
-        cursor: pointer;
-    }
-
-    .burger-menu:focus + .menu, .menu:target {
+    .nav-menu ul {
+        padding: 0;
+        margin: 0;
         display: flex;
     }
 
-    .close-menu {
-        display: block;
-        position: absolute;
-        top: 5px;
-        right: 0px;
-        background: none;
-        padding-right: 25px;
-        border: none;
-        color: white;
-        font-size: 32px;
-        cursor: pointer;
+    .nav-menu ul li {
+        display: inline-block;
+        padding-left: 10px;
     }
 
-    .menu {
+    .nav-menu ul li a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+    }
+
+    /* navigation - nav-burger menu button - hide on >768px */
+    .nav-burger, .nav-close {
+        display: none;
+    }
+    
+    /* about section - profile picture, profile content */
+    .profile {
+        grid-template-columns: auto 1fr;
+        padding: 0 10px; /* Left and right padding */
+    }
+}
+
+@media (max-width: 768px) {
+    /* logo */
+    .logo {
+        padding: 0 0 0 25px;
+    }
+    
+    /* navigation */
+    .nav-menu {
         display: none;
         position: fixed;
         top: 0;
-        padding-top: 60px;
         right: 0;
+        padding: 30px 0 0 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.9);
-        color: white;
         align-items:flex-start;
         justify-content:flex-start;
+        background: rgba(0, 0, 0, 0.9);
+        color: white;
     }
 
-    .menu ul {
+    .nav-menu ul {
         list-style: none;
         padding-left: 15px;
         font-size: 24px;
     }
     
-    .menu ul li a {
+    .nav-menu ul li a {
         color: white;
         text-decoration: none;
         display: block;
         padding: 10px;
     }
 
-    .profile {
-        background-color: #f3f3f3; /* Light background color */
-        padding: 40px 0; /* Top and bottom padding */
-        width: 100%; /* Full width */
-        margin-bottom: 10px;
+    /* navigation - nav-burger menu button */
+    .nav-burger, .nav-close {
+        display: block;
+        background: none;
+        padding-right: 25px;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .nav-close {
+        position: absolute;
+        top: 5px;
+        right: 0px;
+        font-size: 32px;
+    }
+
+    .nav-burger:focus + .nav-menu, .nav-menu:target {
+        display: flex;
     }
     
-    .profile-container {
-        display: grid;
+    /* about section - profile picture, profile content */
+    .profile {
         grid-template-columns: 1fr;
-        text-align: center;
-        grid-gap: 20px;
-        max-width: 800px; /* Maximum width of content */
-        margin: 0 auto; /* Centers the content horizontally */
-        padding: 0 10px; /* Left and right padding */
-        align-items: flex-start;
+        max-width: 800px;
+        margin: 0;
+        padding: 0 25px 0 25px;
+        text-align:center;
     }
 
     .profile-picture {
-        width: 150px; /* Adjust size as needed */
-        height: 150px;
-        overflow: hidden;
-        border-radius: 50%; /* Circular shape */
         margin: auto;
-        margin-bottom: 15px;
-    }
-    
-    .profile-picture img {
-        width: 100%;
-        height: auto;
-        object-fit: cover; /* Ensures image covers the area */
-    }
-    
-    
-    .profile-content h1 {
-        margin: 0;
-        color: #333; /* Dark text color */
-        font-size: 24px; /* Adjust font size as needed */
-        font-weight:100;
-    }
-    
-    .profile-content h2 {
-        margin: 0;
-        color: #555; /* Slightly lighter text color */
-        font-size: 18px;
-        font-weight: 100;
-    }
-    
-    .profile-content p {
-        color: #666;
-        font-size: 16px;
-        line-height: 1.6; /* Adjust line height for readability */
-        margin-bottom: 30px;
-    }
-
-    .profile-button {
-        padding: 10px 20px;
-        margin-right: 10px;
-        border: none;
-        border-radius: 5px;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s, color 0.3s;
-        text-decoration: none;
-    }
-    
-    .linkedin {
-        background-color: black; /* LinkedIn color */
-        color: #f3f3f3;
-        border: 2px solid black;
-    }
-    
-    .linkedin:hover {
-        background-color: black;
-        color: white; /* Darker shade for hover */
-    }
-    
-    .github {
-        background-color: #f3f3f3;
-        color: black;
-        border: 2px solid black;
-    }
-    
-    .github:hover {
-        background-color: black; /* Light grey for hover */
-        color: white;
-    }
-
-    #contact {
-        background-color: #f3f3f3;
-        padding: 30px;
-        text-align: center;
-    }
-    
-    #contact h2 {
-        color: #333;
-        margin-top: 0;
-        margin-bottom: 30px;
-        font-weight: 100;
-    }
-    
-    .form-group {
-        max-width: 800px;
-        margin: auto;
-        margin-bottom: 15px;
-        text-align: left;
-    }
-    
-    .form-group label {
-        display: block;
-        margin-bottom: 5px;
-    }
-    
-    .form-group input[type="text"],
-    .form-group input[type="email"],
-    .form-group textarea {
-        width: 100%;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        border: none;
-        font-size: 16px;
-        border-bottom: 2px solid #ddd;
-        background-color: transparent;
-        box-sizing: border-box;
-        margin-bottom: 10px;
-    }
-
-    .form-group input[type="text"]:focus,
-    .form-group input[type="email"]:focus,
-    .form-group textarea:focus {
-        outline: none;
-        border-bottom: 2px solid #333; /* Darker border on focus */
-    }
-    
-    .form-group textarea {
-        height: 45px;
-        resize: vertical;
-        margin-bottom: 10px;
-    }
-    
-    .submit-button {
-        padding: 10px 20px;
-        margin-right: 10px;
-        border: none;
-        border-radius: 5px;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s, color 0.3s;
-        text-decoration: none;
-    }
-
-    .submit-button {
-        background-color: black; /* LinkedIn color */
-        color: #f3f3f3;
-        border: 2px solid black;
-    }
-    
-    .submit-button:hover {
-        background-color: black;
-        color: white; /* Darker shade for hover */
     }
 }

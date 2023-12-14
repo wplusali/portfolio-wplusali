@@ -1,385 +1,481 @@
-/* style.css */
-/* ------------------------------- Reset Defaults ------------------------------ */
-body, html {
+/*----- CSS Reset -----*/
+* {
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
-    font-family: Arial, sans-serif;
+    box-sizing: border-box;
 }
-/* ---------------------------------- Headings --------------------------------- */
+/*----- Body Styling -----*/
+body {
+    background-color: #eee;
+}
+
+/*----- Base Font Size and Color -----*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+/*----- Headers (H1, H2, H3, etc,) -----*/
 h1 {
-    margin: 0 0 9px 0;
-    color: #333;
-    font-size: 48px;
-    font-weight: 600;
+  font-size: 2.25em; /* 40px if base font size is 16px */
+  font-family: 'Rubik';
+  font-weight: 400;
+  line-height: 1.2;
+  color: #1a1a1a; /* Slightly darker for emphasis */
 }
 
 h2 {
-    margin: 0 0 7px 0;
-    color: #555;
-    font-size: 24px;
-    font-weight: 500;
+  font-family: 'Rubik';
+  font-size: 1.25em; /* 32px if base font size is 16px */
+  font-weight: 300;
+  line-height: 1.5;
+  color: #1a1a1a;
 }
 
 h3 {
-    margin: 0 0 5px 0;
-    color: #555;
-    font-size: 20px;
-    font-weight:lighter;
+  font-size: 1.75em; /* 28px if base font size is 16px */
+  font-weight: bold;
+  color: #1a1a1a;
 }
 
 h4 {
-    margin: 0 0 3px 0;
-    color: #777;
-    font-size: 16px;
-    font-weight: 300;
+  font-family: 'Lato';
+  font-size: 1.50em; /* 24px if base font size is 16px */
+  font-weight: 100;
+  color: #1a1a1a;
 }
 
-p  {
-    margin: 0 0 1px 0;
-    color: #333;
-    font-size: 16px;
-    line-height: 1.6;
+h5 {
+  font-family: 'Lato';
+  font-size: 1.25em; /* 20px if base font size is 16px */
+  font-weight: normal;
+  line-height: 1.5;
+  color: #606060;
 }
-/* ----------------------------------- Button ---------------------------------- */
+
+h6 {
+  font-size: 1.00em; /* 16px if base font size is 16px */
+  font-weight: normal;
+  color: #1a1a1a;
+}
+
+/*----- Paragraphs -----*/
+p {
+  font-size: 1em; /* 16px */
+  line-height: 1.6; /* Adjust for readability */
+}
+
+/*----- Links -----*/
+a {
+  color: #007bff; /* A blue color for links */
+  text-decoration: none; /* Removes underline */
+}
+
+a:hover {
+  color: #0056b3; /* Darker shade for hover state */
+  text-decoration: underline; /* Adds underline on hover */
+}
+
+/*----- Buttons -----*/
 .button {
-    padding: 10px 20px;
-    margin: 10px 5px 10px 5px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    text-decoration: none;
-    background-color: black;
-    color: white;
-    border: 2px solid black;
+  padding: 10px 20px;
+  margin: 10px 5px 10px 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  text-decoration: none;
+  background-color: #333;
+  color: white;
+  border: 2px solid #333;
 }
 
 .button:hover {
-    background-color: rgb(121, 121, 121);
-    color: white;
-    border: 2px solid rgb(121, 121, 121);
+  background-color: #007bff;
+  color: white;
+  border: 2px solid #007bff;
 }
-/* ----------------------------------- Header ---------------------------------- */
+
+/*----- Utility Classes -----*/
+
+/*----- Grid Layout (12 col) -----*/
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 20px;
+  max-width: 1200px; /* Adjust based on your design */
+  margin: 0 auto;
+  background-color: #fff;
+}
+  
+/*----- Header -----*/ 
 header {
-    background: #333;
-    color: white;
-    padding: 10px 0 10px 0;
+  display: grid;
+  grid-column: 1 / span 12;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 1200px;
+  align-items: center;
+  padding: 20px 0 20px 0;
 }
 
-.header-grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr auto);
-    max-width: 800px;
-    margin: auto;
-    align-items: center;
-}
-/* ------------------------------------ Logo ----------------------------------- */
+/*----- Logo -----*/
 .logo {
-    font-size: 24px;
+  grid-column: 1 / span 1;
+  display: none; /* Logo On/Off */
+  align-items: center; /* Vertically centers the logo */
+  justify-content: left; /* Horizontally centers the logo */
+  padding: 0 0 0 100px;
+  font-family: 'Helvetica';
+  font-size: 1.5em; /* Adjust the size as needed */
+  font-weight: bold;
+  color: #333; /* Or your brand color */
 }
-/* ------------------------------- About Section ------------------------------- */
+
+.logo:hover {
+  opacity: 0.8; /* Example hover effect */
+  cursor: pointer;
+}
+
+/*----- Navigation -----*/
+nav {
+  grid-column: 3 / span 1;
+  display: flex; /* Aligns nav items horizontally */
+  align-items: center; /* Vertically aligns nav items */
+  justify-content: right; /* Horizontally centers nav items in the header */
+  padding: 0 100px 0 0;
+}
+
+.nav-menu ul {
+  list-style: none; /* Removes default list styling */
+  padding: 0; /* Removes default padding */
+  margin: 0; /* Removes default margin */
+  display: flex; /* Display nav items inline */
+}
+
+.nav-menu ul li {
+  margin: 0 15px; /* Space between nav items */
+}
+
+.nav-menu ul li a {
+  font-family: 'Helvetica';
+  font-size: 1.00em;
+  font-weight: bold;
+  text-decoration: none; /* Removes underline from links */
+  color: #333; /* Sets text color */
+  font-weight: normal; /* Makes the font a bit bolder */
+}
+
+.nav-menu ul li a:hover, .nav-menu ul li a:active {
+  color: #007bff; /* Change color on hover/active */
+  text-decoration: underline; /* Underline on hover/active for better visibility */
+}
+
+.nav-burger, .nav-close {
+  display: none; /* Hide by default, shown in media query */
+  /* Additional styling for the burger icon */
+}
+
+/*----- About Section -----*/
+
 #about {
-    background-color: #f3f3f3;
-    padding: 20px 30px 20px 30px;
-    margin: 0 0 10px 0;
-    text-align: left;
-}
-.about-grid {
-    display: grid;
-    grid-template-rows: repeat(1, 125px 1fr);
-    grid-gap: 15px;
-    max-width: 800px;
-    margin: auto;
-    align-items: center;
+  display: grid;
+  grid-column: 1 / span 12;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, auto);
+  max-width: 1200px;
+  align-items: center;
 }
 
-.profile-pic {
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: left;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.about-image {
+  grid-column: 1 / span 1;
+  grid-row: 1;
+  display: flex;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 100px 20px 100px;
 }
 
-.profile-pic img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.about-info p.bio {
-    text-align: left;
+.about-title {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+  display: flex;
+  align-items: center; /* Vertically centers the logo */
+  justify-content: left; /* Horizontally centers the logo */
+  margin: 0 100px 20px 100px;
 }
-/* ------------------------------- Work Section -------------------------------- */
+
+.about-story {
+  grid-column: 1 / span 3;
+  grid-row: 3;
+  display: flex;
+  margin: 0 100px 20px 100px;
+}
+.about-social {
+  grid-column: 1 / span 2;
+  grid-row: 4;
+  display:flex;
+  margin: 0 100px 20px 100px;
+}
+
+.about-social a {
+  margin: 0 30px 0 0; /* Space out the icons */
+  color: #333; /* Default icon color */
+  font-size: 28px; /* Icon size */
+}
+
+.about-social a:hover {
+  color: #007bff; /* Color change on hover */
+}
+
+/*----- Work Section -----*/
+
 #work {
-    padding: 20px;
-    background-color: #f3f3f3;
-    padding: 30px 20px 30px;
-    margin: 0 0 10px 0;  
+  display: grid;
+  grid-column: 1 / span 12;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-gap: 20px;
+  max-width: 1200px;
+  align-items: center;
+  margin: 0 100px 20px 100px;
 }
 
-.work-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    max-width: 800px;
-    margin: auto;
+.work-project-hero {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 1;
 }
 
-.grid-item {
-    position: relative;
-    overflow: hidden;
+.work-project {
+  position: relative;
+  overflow: hidden;
 }
 
-.grid-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease;
+.work-project-img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px; /* Optional: for rounded corners */
+  display: block;
+  transition: transform 0.3s ease;
 }
 
-.grid-item:hover img {
-    transform: scale(1.1);
-}
+/*----- Contact Section -----*/
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.9);
-    color: white;
-    padding: 20px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.grid-item:hover .overlay {
-    opacity: 1;
-}
-
-.hero {
-    grid-column: span 2;
-}
-/* ------------------------------ Contact Section ------------------------------ */
 #contact {
-    background-color: #f3f3f3;
-    padding: 20px 30px 20px 30px;
-    text-align: center;
-/*  margin: 0 0 10px 0;  */ /* To add a space between the next section */
+  display: grid;
+  grid-column: 1 / span 12;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 20px;
+  max-width: 1200px;
+  align-items: center;
+  margin: 0 100px 20px 100px;
 }
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 15px;
-    max-width: 800px;
-    margin: auto;
+.contact h1 {
+  grid-column: 1 / span 1;
+  grid-row: 1;
+  margin-bottom: 15px;
+  text-align: left;
 }
 
 .contact-form {
-    margin-bottom: 15px;
-    text-align: left;
+  grid-column: 1 / span 1;
+  grid-row: 2;
+  margin-bottom: 15px;
+  text-align: left;
 }
 
 .contact-form label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
 }
 
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form textarea {
-    width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border: none;
-    font-size: 16px;
-    border-bottom: 2px solid #ddd;
-    background-color: transparent;
-    box-sizing: border-box;
-    margin: 0 0 0px 0;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: none;
+  font-size: 16px;
+  border-bottom: 2px solid #ddd;
+  background-color: transparent;
+  box-sizing: border-box;
+  margin: 0 0 0px 0;
 }
 
 .contact-form input[type="text"]:focus,
 .contact-form input[type="email"]:focus,
 .contact-form textarea:focus {
-    outline: none;
-    border-bottom: 2px solid #333;
+  outline: none;
+  border-bottom: 2px solid #333;
 }
 
 .contact-form textarea {
-    height: 45px;
-    resize: vertical;
+  height: 45px;
+  resize: vertical;
 }
-/* ----------------------------------- Footer --------------------------------- */
+
+#contact .button {
+  margin: 15px 0px;
+} 
+
+/*----- Footer -----*/ 
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
+  display: grid;
+  grid-column: 1 / span 12;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 20px;
+  max-width: 1200px;
+  align-items: center;
+  margin: 0 100px 20px 100px;
 }
 
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 800px;
-    margin: auto;
-    gap: 20px;
+.footer-copy {
+  grid-column: 1;
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  text-align: center; /* Center-align the text for good measure */
+  padding: 20px 0; /* Optional: Add some padding */
 }
 
-.footer-section {
-    margin-bottom: 20px;
+  
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for tablet */
+  }
+  .logo {
+    display: none; /* Logo On/Off */
+    padding: 0 0 0 50px;
+  }
+  
+  /*----- Navigation -----*/
+  nav {
+    grid-column: 2 / span 1;
+    padding: 0 50px 0 0;
+  }
+  
+  .nav-menu ul li {
+    margin: 0 0 0 15px; /* Space between nav items */
+  }
+  
+  /*----- About Section -----*/
+  
+  #about {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .about-image {
+    grid-column: 1 / span 2;
+    margin: 0 50px 20px 50px;
+  }
+  
+  .about-title {
+    grid-column: 1 / span 2;
+    margin: 0 50px 20px 50px;
+  }
+  
+  .about-story {
+    grid-column: 1 / span 2;
+    margin: 0 50px 20px 50px;
+  }
+  .about-social {
+    grid-column: 1 / span 1;
+    margin: 0 50px 20px 50px;
+  }
+
+  /*----- Work Section -----*/
+
+  #work {
+    margin: 0 50px 20px 50px;
+  }
+  /*----- Contact Section -----*/
+
+  #contact {
+    margin: 0 50px 20px 50px;
+  }
+
+  /*----- Footer -----*/ 
+  footer {
+    margin: 0 50px 20px 50px;
+  }
+  
 }
 
-.footer-section h3 {
-    color: #fff;
-    margin-bottom: 10px;
+@media screen and (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr); /* Single column for mobile */
+  }
+
+  .logo {
+    display: none; /* Logo On/Off */
+    padding: 0 0 0 25px;
+  }
+  
+  /*----- Navigation -----*/
+  nav {
+    grid-column: 2 / span 1;
+    padding: 0 25px 0 0;
+  }
+  
+  .nav-menu ul li {
+    margin: 0 0 0 15px; /* Space between nav items */
+  }
+  
+  /*----- About Section -----*/
+  
+  #about {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .about-image {
+    margin: 0 0 20px 25px;
+  }
+  
+  .about-title {
+    grid-column: 1 / span 1;
+    margin: 0 25px 20px 25px;
+  }
+  
+  .about-story {
+    grid-column: 1 / span 1;
+    margin: 0 25px 20px 25px;
+  }
+  .about-social {
+    grid-column: 1 / span 1;
+    margin: 0 25px 20px 25px;
+  }
+  /*----- Work Section -----*/
+
+  #work {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, auto);
+    margin: 0 25px 20px 25px;
+  }
+
+  .work-project-hero {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+  }
+
+  /*----- Contact Section -----*/
+
+  #contact {
+    margin: 0 25px 20px 25px;
+  }
+  /*----- Footer -----*/ 
+  footer {
+    margin: 0 50px 20px 50px;
+  }
 }
-
-.footer-section p {
-    margin: 0 0 1px 0;
-    color: #fff;
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-.footer-section a {
-    color: #fff;
-    font-size: 16px;
-    text-decoration: none;
-    line-height: 1.6;
-}
-
-.footer-section a:hover {
-    text-decoration: underline;
-    text-decoration-color: #fff;
-}
-
-.footer-bottom {
-    margin-top: 20px;
-    font-size: 14px;
-    grid-column: span 3;
-}
-/* ------------------------------- >768px Screen ------------------------------- */
-@media (min-width: 768px) {
-/* ------------------------------------ Logo ----------------------------------- */
-    .logo {
-        padding: 0 0 0 0px;
-    }
-/* --------------------------------- Navigation -------------------------------- */
-    .nav-menu {
-        display: flex;
-        position: relative;
-        top: auto;
-        right: auto;
-        width: auto;
-        height: auto;
-        background: transparent;
-    }
-
-    .nav-menu ul {
-        padding: 0;
-        margin: 0;
-        display: flex;
-    }
-
-    .nav-menu ul li {
-        display: inline-block;
-        padding-left: 10px;
-    }
-
-    .nav-menu ul li a {
-        color: white;
-        text-decoration: none;
-        display: block;
-        padding: 10px;
-    }
-
-/* --------------------------------- Nav Burger -------------------------------- */
-    .nav-burger, .nav-close {
-        display: none;
-    }
-}
-/* ------------------------------- <768px Screen ------------------------------- */
-@media (max-width: 768px) {
-/* ------------------------------------ Logo ----------------------------------- */
-    .logo {
-        padding: 0 0 0 25px;
-    }
-/* --------------------------------- Navigation -------------------------------- */
-    .nav-menu {
-        display: none;
-        position: fixed;
-        top: 0;
-        right: 0;
-        padding: 30px 0 0 0;
-        width: 100%;
-        height: 100%;
-        align-items:flex-start;
-        justify-content:flex-start;
-        background: rgba(0, 0, 0, 0.9);
-        color: white;
-    }
-
-    .nav-menu ul {
-        list-style: none;
-        padding-left: 15px;
-        font-size: 24px;
-    }
-    
-    .nav-menu ul li a {
-        color: white;
-        text-decoration: none;
-        display: block;
-        padding: 10px;
-    }
-/* --------------------------------- Nav Burger -------------------------------- */
-    .nav-burger, .nav-close {
-        display: block;
-        background: none;
-        padding-right: 25px;
-        border: none;
-        color: white;
-        font-size: 24px;
-        cursor: pointer;
-    }
-
-    .nav-close {
-        position: absolute;
-        top: 5px;
-        right: 0px;
-        font-size: 32px;
-    }
-
-    .nav-burger:focus + .nav-menu, .nav-menu:target {
-        display: flex;
-    }
-/* ------------------------------- Work Section -------------------------------- */
-    .work-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .hero {
-        grid-column: auto;
-        height: 300px;
-    }
-
-    .grid-item img {
-        height: 300px;
-        object-fit: cover;
-    }
-/* ----------------------------------- Footer --------------------------------- */
-    .footer-grid {
-        grid-template-columns: 1fr;
-    }
-}
+  
